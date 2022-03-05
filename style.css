@@ -1,0 +1,963 @@
+/*
+Theme Name: オリジナルテーマ(TECH.I.S)
+*/
+ 
+/*この下からCSSを書いてください*/
+
+/****************************************
+* フォント設定
+*****************************************/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+html, body {
+	font-size: 16px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 50px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : #555;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span{
+    background :#fff;
+  }
+  .hamburger.active span:nth-child(1) {
+    -webkit-transform: translateY(6px);
+    -moz-transform   : translateY(6px);
+    transform        : translateY(6px);
+  }
+  .hamburger.active span:nth-child(2){
+  -webkit-transform: translateY(-4px);
+    -moz-transform   : translateY(-4px);
+    transform        : translateY(-4px);
+  }  
+  
+  .hamburger.active span:nth-child(3) {
+    -webkit-transform: translateY(-14px);
+    -moz-transform   : translateY(-14px);
+    transform        : translateY(-14px);
+  }
+  
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+  
+  nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :#ddd;
+  }
+  
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration :none;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+    opacity: 100;
+  
+  }
+
+
+
+.main {
+    text-align: center;
+    margin: 125px 70px;
+}
+.tittle {}
+.tittle h1 {
+    font-family: serif;
+    font-size: 4rem;
+}
+.tittle .topimg {
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.consept {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.circle{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgb(214, 214, 214);
+  text-align:center;
+  line-height: 80px;
+  margin-bottom: 30px;
+}
+
+
+.consept .direction {
+    margin: 0 50px;
+}
+
+.consept .direction p {
+    font-size: 0.8rem;
+}
+
+span {
+    font-size: 1.5rem;
+    font-family: inherit;
+}
+
+.consept .desing {
+    margin: 0 50px;
+}
+
+.consept .desing p {
+    font-size: 0.8rem;
+}
+
+.consept .coding {
+    margin: 0 50px;
+}
+
+.coding p {
+    font-size: 0.8rem;
+}
+
+.about {
+    margin-top: 200px;
+    position: relative;
+}
+
+.circle3 {
+   
+    display: inline-block;
+    width: 207px;
+    height: 207px;
+    border-radius: 50%;
+    background: rgba(214, 214, 214, 0.2);
+    text-align: left;
+    line-height: 110px;
+    margin-bottom: 35px;
+    position: absolute;
+    top: -106px;
+    right: 54%;
+}
+
+
+.main h2 {
+    font-size: 4rem;
+    margin-bottom: 80px;
+    color: #bdc237;
+}
+
+.about .profile .pro {
+    position: relative;
+    text-align: left;
+    margin-left: 30%;
+    font-family: 游明朝;
+    font-size: 1.3rem;
+}
+
+.about .profile .pro::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 150px;
+    background-color: #0c0c0c;
+    position: absolute;
+    top: -2px;
+    left: -3%;
+}
+
+
+/*****about アニメーション*****************************************************
+
+script.jsにて記入
+
+***/
+
+
+
+
+
+
+.syo {
+    position: relative;
+
+}
+
+.syo .syousai {
+    text-align: center;
+    margin-top: 75px;
+    font-family: 游明朝;
+}
+
+
+.syo .circle2 {
+    display: inline-block;
+    width: 207px;
+    height: 207px;
+    border-radius: 50%;
+    background: rgba(214, 214, 214, 0.35);
+    text-align: left;
+    line-height: 110px;
+    margin-bottom: 35px;
+    position: absolute;
+    top: 35px;
+    right: 35%;
+  }
+
+
+.work {
+    margin-top: 295px;
+}
+
+.act {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+.act .yaki {
+    object-fit: cover;
+    width: 20%;
+    height: 50%;
+    border: solid 1px gray;
+}
+.act .orten {
+    object-fit: cover;
+    width: 18%;
+    height: 50%;
+    margin-left: 90px;
+    border: solid 1px gray;
+}
+
+
+.btnbox {
+    margin-top: 90px;
+    margin-bottom: 150px;
+}
+
+/*主な共通部分は省略*/
+
+a.btn--orange {
+    color: black;
+    background-color: rgba(214, 214, 214, 0.35);
+}
+  
+a.btn--orange:hover {
+    color: black;
+    background: rgba(214, 214, 214, 0.35);
+}
+  
+ 
+  
+a.btn--circle {
+    border-radius: 50%;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+
+.pin {
+    width: 20%;
+}
+
+.contact{
+    position: relative;
+}
+
+.circle4 {
+    display: inline-block;
+    width: 207px;
+    height: 207px;
+    border-radius: 50%;
+    background: rgba(214, 214, 214, 0.2);
+    text-align: left;
+    line-height: 110px;
+    margin-bottom: 35px;
+    position: absolute;
+    top: 63px;
+    right: 62%;
+}
+
+.tmove {
+    margin: 135px;
+}
+
+
+.triangle{
+    margin-left: 47%;
+    width: 0px;
+    height: 0px;
+    border: 30px solid;
+    border-color: transparent transparent  #bdc237 transparent;
+}
+
+
+.v_line_fix {
+    position: absolute;
+    /* margin-left: 50%; */
+    left: 49.75%;
+    width: 1.7px;
+    height: 42px;
+    background-color: rgba(119, 117, 117, 0.904);
+    top: 501%;
+  }
+.tmove .move {
+
+}
+
+.tri {
+/* text-align: center; */
+width: 20%;
+/* justify-content: center;*/
+
+}
+
+
+footer { 
+    width: 75%;   
+    justify-content: center;   
+    margin: 0 auto;    
+    margin-bottom: 50px;
+    padding: 0 20px;
+    }
+    
+.foot {
+    justify-content: center;
+    border-bottom: solid rgba(133, 131, 131, 0.89);
+    display: flex;
+    }
+        
+.foot .fimg {
+    width: 15%;
+    object-fit: cover;
+    height: 70%;
+}
+    
+.foot .company {    
+    line-height: 17rem;
+    font-family: 游明朝;
+}
+    
+
+/****************************************
+* トップページ News
+*****************************************/
+.news__content {
+    margin-top: 170px;
+    padding: 173px 20px
+}
+.news__items {
+    border-bottom: solid 1px #ddd;
+    padding: 20px 10%;
+    margin: 10px 60px;
+}
+.news__item {
+    display: inline-block;
+}
+.news__date {
+    color: #888;
+    background-color: #eee;
+    border-radius: 50px;
+    padding: 5px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.news__title {
+    margin-left: 3%;
+    font-weight: 600;
+    color: #000;
+}
+.news__anchor {
+    float: right;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #000;
+}
+.news__button {
+    position: relative;
+    border-radius: 50px;
+    border: solid 1px #aaa;
+    color: #000;
+    font-weight: 600;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+.a__btn {
+    color: #000;
+}
+
+
+
+
+
+
+/**********************************************************************/
+
+/****************************************
+* トップページ Contact
+*****************************************/
+
+.contact__text {
+	font-size: 1.8rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 40px auto;
+}
+
+@media screen and (max-width: 480px) {
+	.contact__text {
+		font-size: 1.4rem;
+	}
+}
+
+
+.con {
+    display: flex;
+    justify-content: center;
+
+}
+
+a {
+    color: #000;
+}
+
+.mail {
+    
+    margin-left: 80px;
+    width: 47%;
+    margin-top: 7px;
+}
+/*== 上に移動し影がついて浮き上がる */
+
+/*ボタンの形状
+.float3{
+    position:relative;
+    top:0;
+        padding:10px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        color: #333;
+        text-decoration: none;
+        outline: none;
+        /*アニメーションの設定
+        transition: all .3s;
+    }
+    
+    /*hoverをしたらボックスに影がつき、上に上がる
+    .float3:hover {
+    top:-3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    }
+    */
+    
+/****************************************
+* 固定ページ
+*****************************************/
+.page__header {
+	height: 250px;
+	position: relative;
+}
+.page__header img {
+    background: rgba(255, 255, 255, 0.35);
+    filter: blur(1.8px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+}
+.page__header__title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	color: #fff;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.page__header__border {
+	width: 50px;
+	border-bottom: solid 2px #fff;
+	margin: 0 auto;
+}
+/****************************************
+* 投稿内容
+*****************************************/
+.article {
+	max-width: 1152px;
+	margin: 0 auto;
+}
+.article h1 {
+	font-size: 1.6rem;
+	font-weight: bold;
+	margin: 40px auto;
+}
+
+
+
+
+/****************************************
+* ContactForm7
+*****************************************/
+.ContactForm7__contact {
+    margin: 60px auto;
+    max-width: 850px;
+    padding: 0 20px;
+}
+.ContactForm7__contact__title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.ContactForm7__contact__label {
+    font-weight: bold;
+}
+.ContactForm7__contact__label span {
+    font-weight: bold;
+    color: #fff;
+    background-color: #b0b863;;
+    padding: 0 10px;
+    margin: 0 5px;
+    font-size: 0.6rem;
+}
+.ContactForm7__contact input, .ContactForm7__contact textarea {
+    width: 70%;
+    border: none;
+    border: solid 1px #a4a6a6;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px auto 40px
+}
+.ContactForm7__contact textarea {
+    height: 45vh;
+}
+.ContactForm7__contact__submit {
+    text-align: center;
+    max-width: 380px;
+    margin: 0 auto;
+}
+.ContactForm7__contact input[type="submit"] {
+    color: #fff;
+    background-color: #b0b863;;
+    border-radius: 50px;
+    font-size: 1.2rem;
+}
+@media screen and (max-width: 480px) {
+    .ContactForm7__contact {
+        padding: 10px;
+    }
+}
+
+
+/**********************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------
+    /* モバイル向けスタイル */
+
+@media screen and (max-width: 540px) {
+
+    .main {
+        text-align: center;
+        margin: 125px 15px;
+    }
+
+    .tittle .topimg {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .consept {
+        justify-content: center;
+        margin-top: 70px;
+        display: block;
+    }
+
+    .consept .direction {
+        margin: 0 45px;
+        margin-bottom: 60px;
+        border-bottom: solid rgb(121, 121, 121);
+    }
+
+    .consept .desing {
+        margin: 0 45px;
+        margin-bottom: 60px;
+        border-bottom: solid rgb(121, 121, 121);
+    }
+
+    .consept .coding {
+        margin: 0 45px;
+        margin-bottom: 60px;
+        border-bottom: solid rgb(121, 121, 121);
+    }
+
+    .syo .circle2 {
+        display: inline-block;
+        width: 207px;
+        height: 207px;
+        border-radius: 50%;
+        background: rgba(214, 214, 214, 0.35);
+        text-align: left;
+        line-height: 110px;
+        margin-bottom: 35px;
+        position: absolute;
+        top: 35px;
+        right: 0%;
+    }
+
+    .about .profile .pro {
+        position: relative;
+        text-align: left;
+        margin-left: 20%;
+        font-family: 游明朝;
+        font-size: 1rem;
+    }
+
+    .about .profile .pro::before {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 140px;
+        background-color: #0c0c0c;
+        position: absolute;
+        top: -13%;
+        left: -10%;
+    }
+
+    .syo .syousai {
+        font-size: 0.8rem;
+    }
+
+    .act .yaki {
+        width: 35%;
+    }
+
+    .act .orten {
+        width: 32%;
+        height: 50%;
+        margin-left: 30px;
+    }
+
+    .contact .insta {
+        width: 21%;
+    }
+
+    .tmove {
+        margin-top: 100px;
+        margin-bottom: 26px;
+    }
+
+
+   
+
+    .tri {
+        display: initial;
+    /* text-align: center; */
+    width: 139%;
+    /* justify-content: center;*/
+
+    }
+
+    .foot {  
+        border-bottom: solid rgba(133, 131, 131, 0.89);
+        text-align: center;
+    }
+
+    .foot .fimg {
+        display: none;
+    } 
+
+}
+
+
+
+
+
+
+
+
+
+
+  
+  
+/*********************************************************************************/
+
+
+
+
+main {
+    text-align: center;
+    margin: 125px 70px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+ul img {
+    width: 55%;
+}
+
+li{
+  margin: auto;
+}
+
+.hp {}
+.yaki {
+  width: 153%;
+  border: solid rgba(214, 214, 214, 0.8);
+}
+.oru{
+  width: 24%;
+  border: solid rgba(214, 214, 214, 0.8);
+}
+
+.btnbox {
+    margin-top: 90px;
+    margin-bottom: 150px;
+}
+
+/*主な共通部分は省略*/
+
+a.btn--orange {
+    color: black;
+    background-color: rgba(214, 214, 214, 0.35);
+}
+  
+a.btn--orange:hover {
+    color: black;
+    background: rgba(214, 214, 214, 0.35);
+}
+  
+ 
+  
+a.btn--circle {
+    border-radius: 50%;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+
+.btnbox .pin{
+    width: 35%;
+}
+
+/***********************モーダル*********************************************/
+
+
+
+main {
+    text-align: center;
+    margin: 125px 70px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+ul li img {
+    width: 55%;
+}
+
+.btnbox {
+    margin-top: 90px;
+    margin-bottom: 150px;
+}
+
+/*主な共通部分は省略*/
+
+a.btn--orange {
+    color: black;
+    background-color: rgba(214, 214, 214, 0.35);
+}
+  
+a.btn--orange:hover {
+    color: black;
+    background: rgba(214, 214, 214, 0.35);
+}
+  
+ 
+  
+a.btn--circle {
+    border-radius: 50%;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+
+
+/***********************モーダル*********************************************/
+
+
+ul li a:hover {
+    opacity: 0.8;
+  }
+
+ul li a img {
+    width: 200px;
+  }
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+  }
+
+
+  .bigimg img {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    top: 10px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+.close-btn {
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+  }
+
+.close-btn a {
+    color: #fff;
+    text-decoration: none;
+  }
+/*******************************************************************************/
+
+/* --------------------------------------------------
+    /* モバイル向けスタイル */
+
+    @media screen and (max-width: 540px) {
+
+
+   ul{ 
+      list-style: none;
+      display: initial;
+      width: 100%;
+      justify-content: center;
+      margin: 0 auto;
+   }
+
+   .yaki {
+    width: 70%;
+    border: solid rgba(214, 214, 214, 0.8);
+  }
+
+
+  .oru {
+    width: 68%;
+    border: solid rgba(214, 214, 214, 0.8);
+    margin-top: 50px;
+  }
+
+  .bigimg img {
+    position: absolute;
+    width: 80%;
+    max-width: 300px;
+    top: 10px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
