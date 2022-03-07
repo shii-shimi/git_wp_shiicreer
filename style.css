@@ -1134,7 +1134,7 @@ ul li a img {
 
 /********************************************************************/
 /*************************************
-記事一覧　more 
+記事一覧   more 
 *******************************************/
 
 .postlink {
@@ -1143,3 +1143,22 @@ ul li a img {
     justify-content: center;
     margin-top: 30px;
 }
+
+.news__lite {
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.news__time {
+  font-size: 0.7rem;
+  color: #505050;
+  margin-right: 20%;
+  line-height: normal;
+}
+.news__tittle {
+  margin-left: 10%;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+
