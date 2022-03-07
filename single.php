@@ -1,13 +1,4 @@
 <?php get_header(); ?>
-<?php
-if (have_posts()) :
-	while (have_posts()) :
-		the_post(); ?>
-		<!-- アイキャッチ画像 -->
-		<?php the_post_thumbnail('full'); ?>
-		<!-- タイトル -->
-		<?php the_title(); ?>
-		<?php get_header(); ?>
 <?php if(have_posts()): the_post(); ?>
 <article <?php post_class( 'article-content' ); ?>>
   <div class="article-info">
@@ -44,16 +35,10 @@ if (have_posts()) :
   </div>
 </article>
 <?php endif; ?>
-<?php get_footer(); ?>	<!-- 本文 -->
-		<?php the_content(); ?>
-		<!-- カテゴリ -->
-		<?php if (has_category()) : ?>
-			<span class="cat-data">
-				<?php echo get_the_category_list(' '); ?>
-			</span>
-		<?php endif; ?>
-<?php
-	endwhile;
-endif;
-?>
+
+<div class="news__button">
+
+  <a href="http://localhost/wp_shiicreer/wordpress/index.php/category/news/" class="a__btn">記事一覧</a>
+</div>
+
 <?php get_footer(); ?>
