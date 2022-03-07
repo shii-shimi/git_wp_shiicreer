@@ -167,7 +167,7 @@ endif;
              </div>
 
              <div class="btnbox">
-                 <a href="work.html" class="btn btn--orange btn--circle btn--circle-a btn--shadow">
+                 <a href="http://localhost/wp_shiicreer/wordpress/index.php/work/" class="btn btn--orange btn--circle btn--circle-a btn--shadow">
                      more
                      <img src="<?php bloginfo('template_url'); ?>/img/streamline-icon-interface-edit-pin-3@48x48.png" alt="" class="pin">
                  </a>
@@ -185,7 +185,7 @@ endif;
      <span class="circle4"></span>
 
      <div class="con">
-         <a href="https://www.instagram.com/shiicreer">
+         <a href="https://www.instagram.com/shiicreer" target="_blank">
              <img src="<?php bloginfo('template_url'); ?>/img/icons8-インスタグラム-100.png" alt="インスタ" class="insta" >
              
          </a>
