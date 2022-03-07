@@ -36,7 +36,7 @@ Template Name: no-sidebar（カスタムテンプレートの名前）
         </div>
 
         <div class="btnbox">
-            <a href="index.html" class="btn btn--orange btn--circle btn--circle-a btn--shadow">
+            <a href="http://localhost/wp_shiicreer/wordpress/" class="btn btn--orange btn--circle btn--circle-a btn--shadow">
                 home
                 <img src="<?php bloginfo('template_url'); ?>/img/streamline-icon-interface-edit-pin-3@48x48.png" alt="" class="pin">
             </a>
